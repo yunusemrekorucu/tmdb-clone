@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap");
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+  max-width: 1310px;
+  margin: 0 auto;
+}
+.center {
+  @apply flex 
+  items-center
+  justify-center;
+}
+
+.wider_light_shadow {
+  /* box-shadow: -30px 100px 51px -17px rgba(0, 0, 0, 0.75); */
+  box-shadow: 0px 0px 100px #000000;
+  background: red;
+}
