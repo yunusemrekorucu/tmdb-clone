@@ -4,6 +4,7 @@ import TrailerBG from "../../../public/images/trailer-bg.jpeg";
 import CategoryBar from "../common/CategoryBar";
 import TrailerCard from "../common/TrailerCard";
 
+
 const WiderTrailers = () => {
   const trendPaths = [
     {

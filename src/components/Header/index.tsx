@@ -1,16 +1,19 @@
-import React from "react";
 import type { NextPage } from "next";
-import Logo from "../../../public/images/header-logo.svg";
 import Image from "next/image";
-import { HeaderItems } from "../../utils/header-menu";
+import { useRouter } from "next/router";
+import Logo from "../../../public/images/header-logo.svg";
 import { Notification, Plus, Search } from "../../assets/Icons/Icon";
+import { HeaderItems } from "../../utils/header-menu";
 
 const Header: NextPage = () => {
+  const router = useRouter();
   return (
-    <div className="bg-secondary h-16">
+    <div className="bg-secondary h-16 fixed w-full z-40">
       <div className="container text-white flex items-center justify-between h-full px-10">
         <div className="flex items-center">
-          <Image src={Logo} width={154} height={20} alt="" />
+          <span className="cursor-pointer" onClick={() => router.push("/")}>
+            <Image src={Logo} width={154} height={20} alt="" />
+          </span>
           <div>
             <ul className="flex items-center ml-4">
               {HeaderItems.map((item) => (
