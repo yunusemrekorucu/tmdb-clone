@@ -10,7 +10,10 @@ const MovieCard = () => {
   return (
     <div className="min-w-[150px] min-h-[291px]">
       <div className="relative ">
-        <span onClick={() => router.push("/movie/id")}>
+        <span
+          className="cursor-pointer"
+          onClick={() => router.push("/movie/id")}
+        >
           <Image
             className="-z-10 rounded-lg pointer-events-none"
             src={MovieBanner}
@@ -27,7 +30,10 @@ const MovieCard = () => {
         <RatingCircle />
       </div>
       <div className="pl-2">
-        <div className="mt-4 w-4/5 text-tiny font-semibold leading-[18px]">
+        <div
+          onClick={() => router.push("/movie/id")}
+          className="mt-4 w-4/5 text-tiny font-semibold leading-[18px] hover:text-primary cursor-pointer"
+        >
           Ant-Man and the Wasp: Quantumania
         </div>
         <div className="text-sm font-light text-[#00000099]">Feb 10, 2023</div>
