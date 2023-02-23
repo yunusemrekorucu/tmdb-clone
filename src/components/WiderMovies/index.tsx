@@ -21,22 +21,24 @@ const WiderMovies = (props: IWiderMovies) => {
     },
   ];
   return (
-    <section className="container relative pt-[30px]">
-      <CategoryBar title="Trending" path={trendPaths} />
-      {background && (
-        <Image
-          className="absolute bottom-0 -z-10"
-          src="/images/wider-bg.svg"
-          width={1400}
-          height={200}
-          alt=""
-        />
-      )}
-      <div className="wider-light-shadow absolute right-0 z-10" />
-      <div className="h-full flex items-center px-10 gap-x-5 overflow-x-auto pt-4 pb-12">
-        {new Array(12).fill(<MovieCard />)}
-      </div>
-    </section>
+    <div className="bg-white">
+      <section className="container relative pt-[30px] z-10">
+        <CategoryBar title="Trending" path={trendPaths} />
+        {background && (
+          <Image
+            className="absolute bottom-0 -z-10"
+            src="/images/wider-bg.svg"
+            width={1400}
+            height={200}
+            alt=""
+          />
+        )}
+        <div className="wider-light-shadow absolute right-0 z-10" />
+        <div className="h-full flex items-center px-10 gap-x-5 overflow-x-auto pt-4 pb-12">
+          {new Array(12).fill(<MovieCard />)}
+        </div>
+      </section>
+    </div>
   );
 };
 

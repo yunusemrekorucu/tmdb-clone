@@ -4,7 +4,6 @@ import TrailerBG from "../../../public/images/trailer-bg.jpeg";
 import CategoryBar from "../common/CategoryBar";
 import TrailerCard from "../common/TrailerCard";
 
-
 const WiderTrailers = () => {
   const trendPaths = [
     {
@@ -30,28 +29,30 @@ const WiderTrailers = () => {
   ];
 
   return (
-    <section className="relative container h-[378px]">
-      <div className="h-full">
-        <Image
-          className="absolute object-cover h-[378px] -z-20"
-          src={TrailerBG}
-          width={1510}
-          height={578}
-          alt=""
-        />
-        <div className="absolute bg-[#032541bf] -z-10 w-full h-full" />
-        <div className="pt-[30px] h-full overflow-x-auto">
-          <CategoryBar light title="Latest Trailers" path={trendPaths} />
-          <div className="flex items-center gap-x-5 mx-10 h-[250px] mt-2">
-            <TrailerCard />
-            <TrailerCard />
-            <TrailerCard />
-            <TrailerCard />
-            <TrailerCard />
+    <div className="bg-white">
+      <section className="relative container h-[378px] z-10">
+        <div className="h-full">
+          <Image
+            className="absolute object-cover h-[378px] -z-20"
+            src={TrailerBG}
+            width={1510}
+            height={578}
+            alt=""
+          />
+          <div className="absolute bg-[#032541bf] -z-10 w-full h-full" />
+          <div className="pt-[30px] h-full overflow-x-auto">
+            <CategoryBar light title="Latest Trailers" path={trendPaths} />
+            <div className="flex items-center gap-x-5 mx-10 h-[250px] mt-2">
+              <TrailerCard />
+              <TrailerCard />
+              <TrailerCard />
+              <TrailerCard />
+              <TrailerCard />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

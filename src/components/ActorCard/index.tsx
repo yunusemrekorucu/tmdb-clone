@@ -3,7 +3,7 @@ import ActorImage from "@/assets/images/actor.jpeg";
 
 const ActorCard = () => {
   return (
-    <div className="h-[250px] w-[138px] border rounded-lg overflow-hidden">
+    <div className="h-[250px] min-w-[138px] rounded-lg overflow-hidden shadow-sm shadow-[#00000012] mr-4 border border-[#e3e3e3]">
       <div className="h-[175px] w-full">
         <Image className="w-full h-full" src={ActorImage} alt="" />
       </div>

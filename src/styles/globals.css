@@ -8,6 +8,10 @@
   font-family: "Source Sans Pro", sans-serif;
 }
 
+body {
+  background-color: #0d253f;
+}
+
 .container {
   max-width: 1310px;
   margin: 0 auto;
