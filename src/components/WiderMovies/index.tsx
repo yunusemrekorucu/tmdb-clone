@@ -33,7 +33,7 @@ const WiderMovies = (props: IWiderMovies) => {
             alt=""
           />
         )}
-        <div className="wider-light-shadow absolute right-0 z-10" />
+        <div className="wider-shadow" />
         <div className="h-full flex items-center px-10 gap-x-5 overflow-x-auto pt-4 pb-12">
           {new Array(12).fill(<MovieCard />)}
         </div>

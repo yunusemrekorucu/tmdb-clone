@@ -1,6 +1,12 @@
-import { Bookmark, Expand, Hearth, List, Play, RightArrow, Star } from "@/assets/Icons/Icon"; //prettier-ignore
-import { AntManBanner, Banner, Banner2, MovieBanner } from "@/assets/images";
-import { ActorCard, TabCard } from "@/components";
+import { Bookmark, DefaultImage, Expand, Facebook, Grapichs, Hearth, Instagram, List, Play, RightArrow, Star, Twitter, Url } from "@/assets/Icons/Icon"; //prettier-ignore
+import {
+  AntManBanner,
+  Banner,
+  Banner2,
+  MovieBanner,
+  ProfilePhoto,
+} from "@/assets/images";
+import { ActorCard, KeywordBadge, TabCard } from "@/components";
 import { mediaSocialItems, socialTabItems } from "@/utils/tabItems";
 import Image from "next/image";
 
@@ -99,13 +105,14 @@ const MovieDetail = () => {
       </div>
 
       {/* Details */}
-      <div className="bg-white">
+      <div className="bg-white py-[30px]">
         <div className="container z-10">
           <div className="grid grid-cols-5 gap-x-6">
             <div className="col-span-4">
-              <div className="mt-8 mb-4">
+              <div>
                 <h2 className="text-xl font-medium mb-4">Top Billed Cast</h2>
-                <div className="flex items-center w-full overflow-auto pb-8">
+                <div className="flex items-center w-full overflow-auto pb-8 relative">
+                  <div className="wider-shadow" />
                   {new Array(9).fill(<ActorCard />)}
                   <div className="flex items-center h-[250px] min-w-[138px]">
                     <h1 className="flex cursor-pointer">
@@ -199,10 +206,79 @@ const MovieDetail = () => {
                   </div>
                 </div>
                 <div className="border-t border-[#d7d7d7] my-8" />
+                <div className="w-[250px] mb-8">
+                  <h1 className="text-xl font-semibold">Recommendations</h1>
+                  <div className="flex items-center justify-center h-[141px] w-[250px] rounded-md overflow-hidden bg-[#e3e3e3] my-2">
+                    <DefaultImage color="#b5b5b5" size={74} />
+                  </div>
+                  <div className="flex itesm-center justify-between text-sm w-full">
+                    <span>Deadpool 3</span>
+                    <span>0%</span>
+                  </div>
+                </div>
               </div>
             </div>
             {/* Rigth Bar */}
-            <div className="border">right part</div>
+            <section>
+              <div className="flex gap-x-3">
+                <Facebook color="#000" size={32} />
+                <Twitter color="#000" size={32} />
+                <Instagram color="#000" size={32} />
+                <span className="border-l pl-2 border-lightGray">
+                  <Url color="#000" size={32} />
+                </span>
+              </div>
+              <div>
+                <div className="text-sm mt-4">
+                  <h4 className="font-semibold">Status</h4>
+                  <div className="font-light">Relased</div>
+                </div>
+                <div className="text-sm mt-4">
+                  <h4 className="font-semibold">Original Language</h4>
+                  <div className="font-light">English</div>
+                </div>
+                <div className="text-sm mt-4">
+                  <h4 className="font-semibold">Budget</h4>
+                  <div className="font-light">-</div>
+                </div>
+                <div className="text-sm mt-4">
+                  <h4 className="font-semibold">Revenue</h4>
+                  <div className="font-light">$250,093,894.00</div>
+                </div>
+                <div className="text-sm mt-4 w-full">
+                  <h4 className="font-semibold">Keywords</h4>
+                  <div className="font-light my-3 flex flex-wrap gap-1">
+                    {new Array(12).fill(<KeywordBadge title={"hero"} />)}
+                  </div>
+                </div>
+                <div className="border-b border-lightGray w-full my-8" />
+                <div>
+                  <h4 className="font-semibold">Content Score</h4>
+                  <div className="w-full h-10 bg-secondary rounded-md flex items-center mt-3">
+                    <span className="ml-2 text-white">100</span>
+                  </div>
+                  <div className="text-sm">Yes looking good!</div>
+                </div>
+                <div className="mt-6">
+                  <h4 className="font-semibold"> Top Contributors</h4>
+                  {new Array(4).fill(
+                    <div className="flex items-center mb-3">
+                      <div className="rounded-full w-12 h-12 bg-black overflow-hidden">
+                        <Image src={ProfilePhoto} alt="" />
+                      </div>
+                      <div className="flex flex-col leading-4 ml-3">
+                        <span className="font-semibold">566</span>
+                        <span className="font-thin">username</span>
+                      </div>
+                    </div>
+                  )}
+                  <div className="text-sm font-light">View Edit History</div>
+                </div>
+                <div className="bg-secondary rounded-3xl center w-[110px] py-[6px] text-white mt-6">
+                  <div>Edit Page</div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>

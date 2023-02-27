@@ -42,6 +42,7 @@ const WiderTrailers = () => {
           <div className="absolute bg-[#032541bf] -z-10 w-full h-full" />
           <div className="pt-[30px] h-full overflow-x-auto">
             <CategoryBar light title="Latest Trailers" path={trendPaths} />
+            <div className="wider-shadow" />
             <div className="flex items-center gap-x-5 mx-10 h-[250px] mt-2">
               <TrailerCard />
               <TrailerCard />

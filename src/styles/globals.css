@@ -22,8 +22,15 @@ body {
   justify-center;
 }
 
-.wider_light_shadow {
-  /* box-shadow: -30px 100px 51px -17px rgba(0, 0, 0, 0.75); */
-  box-shadow: 0px 0px 100px #000000;
-  background: red;
+.wider-shadow {
+  box-shadow: 0px 0px 23px 24px rgba(255, 255, 255, 1);
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  height: 100%;
+}
+body {
+  @media (display-mode: standalone) {
+    background: red;
+  }
 }
