@@ -1,0 +1,13 @@
+.modal_container {
+  @apply fixed 
+      min-h-[100vh]
+      top-0
+      left-0
+      right-0
+      flex 
+      items-center
+      justify-center 
+      z-50 
+      bg-[rgba(0,0,0,0.4)] 
+      transition-all;
+}
